@@ -52,7 +52,6 @@ class ContainerQuotasTest(base.BaseObjectTest):
 
     @decorators.idempotent_id('9a0fb034-86af-4df0-86fa-f8bd7db21ae0')
     @utils.requires_ext(extension='container_quotas', service='object')
-    @decorators.attr(type="smoke")
     def test_upload_valid_object(self):
         """Attempts to uploads an object smaller than the bytes quota."""
         object_name = data_utils.rand_name(name="TestObject")
@@ -69,7 +68,6 @@ class ContainerQuotasTest(base.BaseObjectTest):
 
     @decorators.idempotent_id('22eeeb2b-3668-4160-baef-44790f65a5a0')
     @utils.requires_ext(extension='container_quotas', service='object')
-    @decorators.attr(type="smoke")
     def test_upload_large_object(self):
         """Attempts to upload an object larger than the bytes quota."""
         object_name = data_utils.rand_name(name="TestObject")
@@ -86,7 +84,6 @@ class ContainerQuotasTest(base.BaseObjectTest):
 
     @decorators.idempotent_id('3a387039-697a-44fc-a9c0-935de31f426b')
     @utils.requires_ext(extension='container_quotas', service='object')
-    @decorators.attr(type="smoke")
     def test_upload_too_many_objects(self):
         """Attempts to upload many objects that exceeds the count limit."""
         for _ in range(QUOTA_COUNT):

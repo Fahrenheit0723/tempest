@@ -76,7 +76,6 @@ class AccountQuotasTest(base.BaseObjectTest):
         cls.delete_containers()
         super(AccountQuotasTest, cls).resource_cleanup()
 
-    @decorators.attr(type="smoke")
     @decorators.idempotent_id('a22ef352-a342-4587-8f47-3bbdb5b039c4')
     @utils.requires_ext(extension='account_quotas', service='object')
     def test_upload_valid_object(self):
@@ -88,7 +87,6 @@ class AccountQuotasTest(base.BaseObjectTest):
 
         self.assertHeaders(resp, 'Object', 'PUT')
 
-    @decorators.attr(type=["smoke"])
     @decorators.idempotent_id('63f51f9f-5f1d-4fc6-b5be-d454d70949d6')
     @utils.requires_ext(extension='account_quotas', service='object')
     def test_admin_modify_quota(self):
