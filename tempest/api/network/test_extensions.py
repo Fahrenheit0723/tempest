@@ -29,7 +29,6 @@ class ExtensionsTestJSON(base.BaseNetworkTest):
     etc/tempest.conf.
     """
 
-    @decorators.attr(type='smoke')
     @decorators.idempotent_id('ef28c7e6-e646-4979-9d67-deb207bc5564')
     def test_list_show_extensions(self):
         """List available extensions and show the detail of each extension"""

@@ -126,7 +126,7 @@ class TestServerBasicOps(manager.ScenarioTest):
             # instance info and do direct comparison.
 
     @decorators.idempotent_id('7fff3fb3-91d8-4fd0-bd7d-0204f1f180ba')
-    @decorators.attr(type='smoke')
+
     @utils.services('compute', 'network')
     def test_server_basic_ops(self):
         keypair = self.create_keypair()

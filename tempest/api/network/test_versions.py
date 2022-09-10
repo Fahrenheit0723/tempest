@@ -17,7 +17,7 @@ from tempest.lib import decorators
 
 
 class NetworksApiDiscovery(base.BaseNetworkTest):
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('cac8a836-c2e0-4304-b556-cd299c7281d1')
     def test_api_version_resources(self):
         """Test that GET / returns expected resources.
@@ -39,7 +39,7 @@ class NetworksApiDiscovery(base.BaseNetworkTest):
                     self.assertIn(resource, version)
                 self.assertIn(version['id'], expected_versions)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('e64b7216-3178-4263-967c-d389290988bf')
     def test_show_api_v2_details(self):
         """Test that GET /v2.0/ returns expected resources."""

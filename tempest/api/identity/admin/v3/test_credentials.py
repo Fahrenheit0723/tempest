@@ -46,8 +46,9 @@ class CredentialsTestJSON(base.BaseIdentityV3AdminTest):
     def _delete_credential(self, cred_id):
         self.creds_client.delete_credential(cred_id)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('7cd59bf9-bda4-4c72-9467-d21cab278355')
+    @decorators.attr(type='smoke')
     def test_credentials_create_get_update_delete(self):
         """Test creating, getting, updating, deleting of credentials"""
         blob = '{"access": "%s", "secret": "%s"}' % (

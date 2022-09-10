@@ -74,7 +74,7 @@ class RolesV3TestJSON(base.BaseIdentityV3AdminTest):
             cls.addClassResourceCleanup(cls.users_client.delete_user,
                                         cls.user_body['id'])
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('18afc6c0-46cf-4911-824e-9989cc056c3a')
     def test_role_create_update_show_list(self):
         """Test creating, updating, showing and listing a role"""

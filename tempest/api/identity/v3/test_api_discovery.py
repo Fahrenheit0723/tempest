@@ -34,7 +34,7 @@ class TestApiDiscovery(base.BaseIdentityV3Test):
         self.assertEqual(CONF.identity_feature_enabled.api_v3, found)
 
     @decorators.idempotent_id('721f480f-35b6-46c7-846e-047e6acea0dc')
-    @decorators.attr(type='smoke')
+
     def test_list_api_versions(self):
         """Test listing identity api versions
 
@@ -50,7 +50,7 @@ class TestApiDiscovery(base.BaseIdentityV3Test):
             for res in expected_resources:
                 self.assertIn(res, version)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('b9232f5e-d9e5-4d97-b96c-28d3db4de1bd')
     def test_api_version_resources(self):
         """Test showing identity v3 api version resources"""
@@ -62,7 +62,7 @@ class TestApiDiscovery(base.BaseIdentityV3Test):
         for res in expected_resources:
             self.assertIn(res, keys)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('657c1970-4722-4189-8831-7325f3bc4265')
     def test_api_media_types(self):
         """Test showing identity v3 api version media type"""
@@ -78,7 +78,7 @@ class TestApiDiscovery(base.BaseIdentityV3Test):
         for s_type in supported_types:
             self.assertIn(s_type, media_types)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('8879a470-abfb-47bb-bb8d-5a7fd279ad1e')
     def test_api_version_statuses(self):
         """Test showing identity v3 api version status"""

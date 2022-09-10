@@ -81,7 +81,7 @@ class ServicesTestJSON(base.BaseIdentityV2AdminTest):
         self.assertIn('type', service)
         self.assertEqual(s_type, service['type'])
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('34ea6489-012d-4a86-9038-1287cadd5eca')
     def test_list_services(self):
         """Test Create/List/Verify/Delete of identity service via v2 API"""

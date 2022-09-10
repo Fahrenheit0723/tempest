@@ -116,7 +116,7 @@ class VolumesListTestJSON(base.BaseVolumeTest):
                     else:
                         self.assertEqual(params[key], volume[key], msg)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('0b6ddd39-b948-471f-8038-4787978747c4')
     def test_volume_list(self):
         """Test getting a list of volumes"""

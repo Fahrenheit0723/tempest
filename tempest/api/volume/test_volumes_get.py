@@ -113,14 +113,14 @@ class VolumesGetTest(base.BaseVolumeTest):
         else:
             self.assertEqual('false', updated_volume['bootable'])
 
-    @decorators.attr(type='smoke')
     @decorators.idempotent_id('27fb0e9f-fb64-41dd-8bdb-1ffa762f0d51')
+    @decorators.attr(type='smoke')
     def test_volume_create_get_update_delete(self):
         """Test Create/Get/Update/Delete of a blank volume"""
         self._volume_create_get_update_delete(size=CONF.volume.volume_size)
 
-    @decorators.attr(type='smoke')
     @decorators.idempotent_id('54a01030-c7fc-447c-86ee-c1182beae638')
+    @decorators.attr(type='smoke')
     @utils.services('image')
     def test_volume_create_get_update_delete_from_image(self):
         """Test Create/Get/Update/Delete of a volume created from image"""

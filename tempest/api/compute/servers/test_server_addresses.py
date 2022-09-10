@@ -33,8 +33,9 @@ class ServerAddressesTestJSON(base.BaseV2ComputeTest):
 
         cls.server = cls.create_test_server(wait_until='ACTIVE')
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('6eb718c0-02d9-4d5e-acd1-4e0c269cef39')
+    @decorators.attr(type='smoke')
     @utils.services('network')
     def test_list_server_addresses(self):
         """Test listing server address
@@ -50,7 +51,7 @@ class ServerAddressesTestJSON(base.BaseV2ComputeTest):
         for network_addresses in addresses.values():
             self.assertNotEmpty(network_addresses)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('87bbc374-5538-4f64-b673-2b0e4443cc30')
     @utils.services('network')
     def test_list_server_addresses_by_network(self):

@@ -275,7 +275,7 @@ class TrustsV3TestJSON(base.BaseIdentityV3AdminTest):
         self.assertEqual(1, len(trusts_get))
         self.validate_trust(trusts_get[0], summary=True)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('4773ebd5-ecbf-4255-b8d8-b63e6f72b65d')
     def test_get_trusts_all(self):
         """Test getting all keystone trusts"""

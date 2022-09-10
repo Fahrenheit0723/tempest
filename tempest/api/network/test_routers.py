@@ -49,8 +49,9 @@ class RoutersTest(base.BaseNetworkTest):
             msg = "router extension not enabled."
             raise cls.skipException(msg)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('f64403e2-8483-4b34-8ccd-b09a87bcc68c')
+    @decorators.attr(type='smoke')
     @testtools.skipUnless(CONF.network.public_network_id,
                           'The public_network_id option must be specified.')
     def test_create_show_list_update_delete_router(self):
@@ -86,8 +87,9 @@ class RoutersTest(base.BaseNetworkTest):
             router['id'])['router']
         self.assertEqual(router_show['name'], updated_name)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('b42e6e39-2e37-49cc-a6f4-8467e940900a')
+    @decorators.attr(type='smoke')
     def test_add_remove_router_interface_with_subnet_id(self):
         """Test adding and removing router interface with subnet id"""
         network_name = data_utils.rand_name(self.__class__.__name__)
@@ -113,8 +115,9 @@ class RoutersTest(base.BaseNetworkTest):
         self.assertEqual(show_port_body['port']['device_id'],
                          router['id'])
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('2b7d2f37-6748-4d78-92e5-1d590234f0d5')
+    @decorators.attr(type='smoke')
     def test_add_remove_router_interface_with_port_id(self):
         """Test adding and removing router interface with port id"""
         network_name = data_utils.rand_name(self.__class__.__name__)
@@ -231,8 +234,9 @@ class RoutersTest(base.BaseNetworkTest):
         show_body = self.routers_client.show_router(router['id'])
         self.assertTrue(show_body['router']['admin_state_up'])
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('802c73c9-c937-4cef-824b-2191e24a6aab')
+    @decorators.attr(type='smoke')
     def test_add_multiple_router_interfaces(self):
         """Test adding multiple router interfaces"""
         network_name = data_utils.rand_name(self.__class__.__name__)

@@ -26,7 +26,7 @@ class ContainerTest(base.BaseObjectTest):
         cls.delete_containers()
         super(ContainerTest, cls).resource_cleanup()
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('92139d73-7819-4db1-85f8-3f2f22a8d91f')
     def test_create_container(self):
         """Test creating container"""
@@ -125,7 +125,7 @@ class ContainerTest(base.BaseObjectTest):
         resp, _ = self.container_client.delete_container(container_name)
         self.assertHeaders(resp, 'Container', 'DELETE')
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('312ff6bd-5290-497f-bda1-7c5fec6697ab')
     def test_list_container_contents(self):
         """Test getting container contents list"""
@@ -272,7 +272,7 @@ class ContainerTest(base.BaseObjectTest):
         self.assertHeaders(resp, 'Container', 'GET')
         self.assertEqual([object_name], object_list)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('96e68f0e-19ec-4aa2-86f3-adc6a45e14dd')
     def test_list_container_metadata(self):
         """Test listing container metadata"""

@@ -19,7 +19,6 @@ from tempest.lib import decorators
 class TestVersions(base.BaseV2ComputeTest):
 
     @decorators.idempotent_id('6c0a0990-43b6-4529-9b61-5fd8daf7c55c')
-    @decorators.attr(type='smoke')
     def test_list_api_versions(self):
         """Test that a get of the unversioned url returns the choices doc.
 
@@ -38,7 +37,6 @@ class TestVersions(base.BaseV2ComputeTest):
                          "The first listed version should be v2.0")
 
     @decorators.idempotent_id('b953a29e-929c-4a8e-81be-ec3a7e03cb76')
-    @decorators.attr(type='smoke')
     def test_get_version_details(self):
         """Test individual version endpoints info works.
 

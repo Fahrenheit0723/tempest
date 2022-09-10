@@ -70,8 +70,9 @@ class FloatingIPTestJSON(base.BaseNetworkTest):
             port = cls.create_port(cls.network)
             cls.ports.append(port)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('62595970-ab1c-4b7f-8fcc-fddfe55e8718')
+    @decorators.attr(type='smoke')
     def test_create_list_show_update_delete_floating_ip(self):
         """Test create/list/show/update/delete floating ip"""
         # Creates a floating IP
@@ -218,8 +219,9 @@ class FloatingIPTestJSON(base.BaseNetworkTest):
                          port_other_router['id'])
         self.assertIsNotNone(updated_floating_ip['fixed_ip_address'])
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('36de4bd0-f09c-43e3-a8e1-1decc1ffd3a5')
+    @decorators.attr(type='smoke')
     def test_create_floating_ip_specifying_a_fixed_ip_address(self):
         """Test creating floating ip with specified fixed ip"""
         body = self.floating_ips_client.create_floatingip(

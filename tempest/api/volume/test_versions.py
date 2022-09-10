@@ -20,7 +20,7 @@ class VersionsTest(base.BaseVolumeTest):
     """Test volume versions"""
 
     @decorators.idempotent_id('77838fc4-b49b-4c64-9533-166762517369')
-    @decorators.attr(type='smoke')
+
     def test_list_versions(self):
         """Test listing volume versions"""
         # NOTE: The version data is checked on service client side

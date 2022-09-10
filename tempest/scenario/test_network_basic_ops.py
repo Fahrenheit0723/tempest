@@ -394,7 +394,7 @@ class TestNetworkBasicOps(manager.NetworkScenarioTest):
             router['id'], **kwargs)['router']
         self.assertEqual(admin_state_up, router['admin_state_up'])
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('f323b3ba-82f8-4db7-8ea6-6a895869ec49')
     @utils.services('compute', 'network')
     def test_network_basic_ops(self):

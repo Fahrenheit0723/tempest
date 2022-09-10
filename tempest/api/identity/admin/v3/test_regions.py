@@ -81,7 +81,7 @@ class RegionsTestJSON(base.BaseIdentityV3AdminTest):
         regions_list = [r['id'] for r in body]
         self.assertNotIn(region['id'], regions_list)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('2c12c5b5-efcf-4aa5-90c5-bff1ab0cdbe2')
     def test_create_region_with_specific_id(self):
         """Test creating region with specific id"""

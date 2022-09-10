@@ -20,7 +20,7 @@ class VersionsTest(base.BaseV2ImageTest):
     """Test image versions"""
 
     @decorators.idempotent_id('659ea30a-a17c-4317-832c-0f68ed23c31d')
-    @decorators.attr(type='smoke')
+
     def test_list_versions(self):
         """Test listing image versions"""
         versions = self.versions_client.list_versions()['versions']

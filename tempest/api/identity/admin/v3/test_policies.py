@@ -44,7 +44,7 @@ class PoliciesTestJSON(base.BaseIdentityV3AdminTest):
         missing_pols = [p for p in policy_ids if p not in fetched_ids]
         self.assertEmpty(missing_pols)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('e544703a-2f03-4cf2-9b0f-350782fdb0d3')
     def test_create_update_delete_policy(self):
         """Test to update keystone policy"""

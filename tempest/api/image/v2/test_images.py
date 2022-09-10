@@ -403,7 +403,7 @@ class MultiStoresImportImagesTest(base.BaseV2ImageTest):
 class BasicOperationsImagesTest(base.BaseV2ImageTest):
     """Here we test the basic operations of images"""
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('139b765e-7f3d-4b3d-8b37-3ca3876ee318')
     def test_register_upload_get_image_file(self):
         """Here we test these functionalities
@@ -456,8 +456,9 @@ class BasicOperationsImagesTest(base.BaseV2ImageTest):
         self.assertEqual(file_content, body.data)
         self.assertEqual(200, body.response.status)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('f848bb94-1c6e-45a4-8726-39e3a5b23535')
+    @decorators.attr(type='smoke')
     def test_delete_image(self):
         """Test deleting an image by image_id"""
         # Create image
@@ -477,8 +478,9 @@ class BasicOperationsImagesTest(base.BaseV2ImageTest):
         images_id = [item['id'] for item in images]
         self.assertNotIn(image['id'], images_id)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('f66891a7-a35c-41a8-b590-a065c2a1caa6')
+    @decorators.attr(type='smoke')
     def test_update_image(self):
         """Test updating an image by image_id"""
         # Create image

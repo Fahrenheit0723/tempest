@@ -28,7 +28,7 @@ class SecurityGroupsTestJSON(base.BaseSecurityGroupsTest):
         super(SecurityGroupsTestJSON, cls).setup_clients()
         cls.client = cls.security_groups_client
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('eb2b087d-633d-4d0d-a7bd-9e6ba35b32de')
     def test_security_groups_create_list_delete(self):
         """Test create/list/delete security groups

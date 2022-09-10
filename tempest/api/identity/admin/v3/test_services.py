@@ -29,7 +29,7 @@ class ServicesTestJSON(base.BaseIdentityV3AdminTest):
         self.assertRaises(lib_exc.NotFound, self.services_client.show_service,
                           service_id)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('5193aad5-bcb7-411d-85b0-b3b61b96ef06')
     def test_create_update_get_service(self):
         """Test creating, updating and getting of keystone service"""

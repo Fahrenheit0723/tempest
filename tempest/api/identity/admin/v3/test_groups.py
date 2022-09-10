@@ -74,8 +74,9 @@ class GroupsV3TestJSON(base.BaseIdentityV3AdminTest):
         self.assertEqual(first_desc_update, updated_group['description'])
         self.assertEqual(self.domain['id'], updated_group['domain_id'])
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('1598521a-2f36-4606-8df9-30772bd51339')
+    @decorators.attr(type='smoke')
     @testtools.skipIf(CONF.identity_feature_enabled.immutable_user_source,
                       'Skipped because environment has an '
                       'immutable user source and solely '

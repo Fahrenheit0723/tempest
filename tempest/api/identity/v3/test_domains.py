@@ -33,7 +33,7 @@ class DefaultDomainTestJSON(base.BaseIdentityV3Test):
         super(DefaultDomainTestJSON, cls).resource_setup()
         cls.domain_id = CONF.identity.default_domain_id
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('17a5de24-e6a0-4e4a-a9ee-d85b6e5612b5')
     def test_default_domain_exists(self):
         """Test showing default domain"""

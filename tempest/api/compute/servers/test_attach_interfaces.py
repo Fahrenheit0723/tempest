@@ -350,7 +350,7 @@ class AttachInterfacesUnderV243Test(AttachInterfacesTestBase):
 
     max_microversion = '2.43'
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('c7e0e60b-ee45-43d0-abeb-8596fd42a2f9')
     @utils.services('network')
     def test_add_remove_fixed_ip(self):

@@ -72,7 +72,7 @@ class DomainsTestJSON(base.BaseIdentityV3AdminTest):
         for domain in fetched_domains:
             self.assertEqual(True, domain['enabled'])
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('f2f5b44a-82e8-4dad-8084-0661ea3b18cf')
     def test_create_update_delete_domain(self):
         """Test creating, updating and deleting domain"""

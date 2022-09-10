@@ -69,7 +69,7 @@ class ServersTestJSON(base.BaseV2ComputeTest):
             volume_backed=cls.volume_backed)
         cls.server = cls.client.show_server(server_initial['id'])['server']
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('5de47127-9977-400a-936f-abcfbec1218f')
     def test_verify_server_details(self):
         """Verify the specified server attributes are set correctly"""
@@ -87,7 +87,7 @@ class ServersTestJSON(base.BaseV2ComputeTest):
         self.assert_flavor_equal(self.flavor_ref, self.server['flavor'])
         self.assertEqual(self.meta, self.server['metadata'])
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('9a438d88-10c6-4bcd-8b5b-5b6e25e1346f')
     def test_list_servers(self):
         """The created server should be in the list of all servers"""

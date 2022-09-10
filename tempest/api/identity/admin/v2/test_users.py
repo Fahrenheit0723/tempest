@@ -31,7 +31,7 @@ class UsersTestJSON(base.BaseIdentityV2AdminTest):
         cls.alt_user = data_utils.rand_name('test_user')
         cls.alt_email = cls.alt_user + '@testmail.tm'
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('2d55a71e-da1d-4b43-9c03-d269fd93d905')
     def test_create_user(self):
         """Test creating a user via v2 API"""

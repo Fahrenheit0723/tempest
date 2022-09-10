@@ -50,7 +50,7 @@ class AccountTest(base.BaseObjectTest):
             cls.containers.append(name)
         cls.containers_count = len(cls.containers)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('3499406a-ae53-4f8c-b43a-133d4dc6fe3f')
     def test_list_containers(self):
         """Test listing containers"""
@@ -282,7 +282,7 @@ class AccountTest(base.BaseObjectTest):
         self.assertEqual(sorted(orig_container_list, reverse=True),
                          container_list)
 
-    @decorators.attr(type='smoke')
+
     @decorators.idempotent_id('4894c312-6056-4587-8d6f-86ffbf861f80')
     def test_list_account_metadata(self):
         """Test listing account metadata"""
